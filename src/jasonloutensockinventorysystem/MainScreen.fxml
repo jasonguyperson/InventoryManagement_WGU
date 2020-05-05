@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="466.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jasonloutensockinventorysystem.MainScreenController">
+    <children>
+      <Label layoutX="41.0" layoutY="28.0" prefHeight="25.0" prefWidth="188.0" text="Inventory Management System" textFill="#180286">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+        <Button fx:id="cancelButton" layoutX="784.0" layoutY="411.0" onAction="#confirmExit" prefHeight="30.0" prefWidth="80.0" text="Exit" />
+      <VBox layoutX="41.0" layoutY="73.0" prefHeight="324.0" prefWidth="400.0" style="-fx-border-color: gray; -fx-border-radius: 5px;">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="400.0">
+               <effect>
+                  <Blend />
+               </effect>
+               <children>
+                  <Label prefHeight="11.0" prefWidth="42.0" text="Parts">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="searchPartButton" mnemonicParsing="false" onAction="#searchPartsField" text="Search">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="100.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="searchPartTextField">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="220.0" prefWidth="400.0">
+               <children>
+                  <TableView fx:id="addPartTableView" prefHeight="220.0" prefWidth="400.0">
+                    <columns>
+                        <TableColumn fx:id="addPartPartIDColumn" prefWidth="100.0" text="Part ID" />
+                      <TableColumn fx:id="addPartNameColumn" prefWidth="100.0" text="Part Name" />
+                      <TableColumn fx:id="addPartInStockColumn" prefWidth="74.0" text="Inventory Level" />
+                        <TableColumn fx:id="addPartPriceColumn" prefWidth="126.0" text="Price/Cost per Unit" />
+                    </columns>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox prefHeight="56.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="addPartButton" mnemonicParsing="false" onAction="#newSceneButton" prefHeight="30.0" prefWidth="80.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="modifyPartButton" mnemonicParsing="false" onAction="#newSceneButton" prefHeight="30.0" prefWidth="80.0" text="Modify">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deletePartButton" mnemonicParsing="false" onAction="#deletePartButton" prefHeight="30.0" prefWidth="80.0" text="Delete">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="464.0" layoutY="73.0" prefHeight="324.0" prefWidth="400.0" style="-fx-border-color: gray; -fx-border-radius: 5px;">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="400.0">
+               <effect>
+                  <Blend />
+               </effect>
+               <children>
+                  <Label prefHeight="13.0" prefWidth="65.0" text="Products">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="searchProductButton" mnemonicParsing="false" onAction="#searchProductsField" text="Search">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="80.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+                  <TextField fx:id="searchProductTextField">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <TableView fx:id="productTableView" prefHeight="220.0" prefWidth="400.0">
+               <columns>
+                  <TableColumn fx:id="productIDColumn" prefWidth="100.0" text="Product ID" />
+                  <TableColumn fx:id="productNameColumn" prefWidth="100.0" text="Product Name" />
+                  <TableColumn fx:id="productInStockColumn" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPriceColumn" prefWidth="100.0" text="Unit Cost" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="57.0" prefWidth="400.0">
+               <children>
+                  <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#newSceneButton" prefHeight="30.0" prefWidth="80.0" text="Add">
+                     <HBox.margin>
+                        <Insets left="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="modifyProductButton" mnemonicParsing="false" onAction="#newSceneButton" prefHeight="30.0" prefWidth="80.0" text="Modify">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteProductButton" mnemonicParsing="false" onAction="#deleteProductButton" prefHeight="30.0" prefWidth="80.0" text="Delete">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

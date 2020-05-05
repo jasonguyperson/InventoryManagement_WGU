@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JasonLoutensockInventorySystem.jnlp">
+  <information>
+    <title>JasonLoutensockInventorySystem</title>
+    <vendor>Jason</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JasonLoutensockInventorySystem.jar" size="36381" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JasonLoutensockInventorySystem" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="jasonloutensockinventorysystem.JasonLoutensockInventorySystem"  name="JasonLoutensockInventorySystem" />
+  <update check="always"/>
+</jnlp>
